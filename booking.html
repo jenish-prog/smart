@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EventEase - Book Your Event</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Shining animation for Book Now button */
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shine::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+      transform: skewX(-25deg);
+      animation: shine 2.5s infinite;
+      z-index: 10;
+    }
+    @keyframes shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+
+    /* Animation for image */
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .animated-photo {
+      animation: floatUpDown 4s ease-in-out infinite;
+      border-radius: 1rem;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+  
+</head>
+<body class="bg-gradient-to-br from-yellow-50 to-yellow-100 min-h-screen">
+  <!-- Navbar -->
+<nav class="bg-slate-900 text-white shadow-md fixed w-full z-20 top-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html" class="text-2xl font-semibold text-yellow-400">SMART</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="index.html#home" class="text-gray-300 hover:text-yellow-400 transition duration-200">Home</a>
+        <a href="index.html#service" class="text-gray-300 hover:text-yellow-400 transition duration-200">Services</a>
+        <a href="index.html#gallery" class="text-gray-300 hover:text-yellow-400 transition duration-200">Gallery</a>
+        <a href="index.html#contact" class="text-gray-300 hover:text-yellow-400 transition duration-200">Contact</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-button" class="text-gray-300 focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="md:hidden bg-slate-900 text-gray-300 px-4 pt-4 pb-6 space-y-4 hidden">
+    <a href="index.html#home" class="block hover:text-yellow-400 transition duration-200">Home</a>
+    <a href="index.html#service" class="block hover:text-yellow-400 transition duration-200">Services</a>
+    <a href="index.html#gallery" class="block hover:text-yellow-400 transition duration-200">Gallery</a>
+    <a href="index.html#contact" class="block hover:text-yellow-400 transition duration-200">Contact</a>
+  </div>
+
+  <script>
+    // Mobile menu toggle script
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
+
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-slate-900">
+      <a href="index.html#home" class="block text-gray-300 hover:text-yellow-400 py-2">Home</a>
+      <a href="index.html#service" class="block text-gray-300 hover:text-yellow-400 py-2">Services</a>
+      <a href="index.html#gallery" class="block text-gray-300 hover:text-yellow-400 py-2">Gallery</a>
+      <a href="index.html#contact" class="block text-gray-300 hover:text-yellow-400 py-2">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Booking Section with Left Animated Photo -->
+  <section id="booknow" class="max-w-6xl mx-auto mt-36 mb-24 px-6 bg-white rounded-3xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-10">
+    <!-- Left side animated image -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        alt="Event decoration"
+        class="animated-photo"
+      />
+    </div>
+
+    <!-- Right side booking form -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-4xl font-extrabold text-yellow-900 mb-6 text-center md:text-left">Plan Your Event With Us</h2>
+      <form action="#" method="POST" class="space-y-6">
+
+        <div>
+          <label for="name" class="block mb-2 font-semibold text-gray-900">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+
+        <div>
+          <label for="email" class="block mb-2 font-semibold text-gray-900">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+
+        <div>
+          <label for="phone" class="block mb-2 font-semibold text-gray-900">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+91"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+
+        <div>
+          <label for="date" class="block mb-2 font-semibold text-gray-900">Event Date</label>
+          <input type="date" id="date" name="date" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+
+        <div>
+          <label for="event" class="block mb-2 font-semibold text-gray-900">Select Event Type</label>
+          <select id="event" name="event" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 cursor-pointer focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="" disabled selected>Choose event type</option>
+            <option value="photograph">Photograph</option>
+            <option value="makeup">Bride Makeup</option>
+            <option value="catering">Food and Catering Services (All in One)</option>
+            <option value="decoration">Stage Decoration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block mb-2 font-semibold text-gray-900">Additional Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us more about your event..."
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 rounded-xl transition-shadow shadow-md hover:shadow-lg">
+          Submit Booking
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle script
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+<!-- footer -->
+ <footer class="relative bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 text-slate-300 py-16 px-8 md:px-24 overflow-hidden">
+  <!-- Top slant -->
+  <div class="absolute top-0 left-0 w-full h-12 bg-yellow-500/80 transform -skew-y-2 origin-top-left"></div>
+
+  <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <!-- Brand -->
+    <div>
+      <h3 class="text-3xl font-extrabold text-yellow-400 mb-4">EventEase</h3>
+      <p class="max-w-xs leading-relaxed text-slate-400">
+        Creating memorable experiences, one event at a time.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <nav>
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Gallery</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Info -->
+    <address class="not-italic">
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Contact Us</h4>
+      <p class="mb-2">123 Event Street, Suite 456</p>
+      <p class="mb-2">Cityville, Country</p>
+      <p class="mb-2">Phone: +1 (555) 123-4567</p>
+      <p>Email: contact@eventease.com</p>
+    </address>
+
+    <!-- Social -->
+    <div>
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Follow Us</h4>
+      <div class="flex space-x-6">
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.005 3.657 9.128 8.438 9.879v-6.987h-2.54v-2.892h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.466h-1.26c-1.243 0-1.63.774-1.63 1.566v1.875h2.773l-.443 2.892h-2.33v6.987C18.343 21.128 22 17.005 22 12z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2.5a1.5 1.5 0 11-3.001-.001A1.5 1.5 0 0116.5 5.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom slant -->
+  <div class="absolute bottom-0 left-0 w-full h-12 bg-yellow-500/80 transform skew-y-2 origin-bottom-left"></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+<nav class="bg-slate-900 text-white shadow-md fixed w-full z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="#home" class="text-2xl font-semibold text-yellow-400">SMART</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#home" class="text-gray-300 hover:text-yellow-400 transition duration-200">Home</a>
+        <a href="#service" class="text-gray-300 hover:text-yellow-400 transition duration-200">Services</a>
+        <a href="#gallery" class="text-gray-300 hover:text-yellow-400 transition duration-200">Gallery</a>
+        <a href="#contact" class="text-gray-300 hover:text-yellow-400 transition duration-200">Contact</a>
+        <a href="booking.html" class="bg-yellow-400 text-slate-900 px-4 py-2 rounded-md font-medium hover:bg-yellow-300 transition">Book Now</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-button" class="text-gray-300 focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="md:hidden bg-slate-900 text-gray-300 px-4 pt-4 pb-6 space-y-4 hidden">
+    <a href="#home" class="block hover:text-yellow-400 transition duration-200">Home</a>
+    <a href="#service" class="block hover:text-yellow-400 transition duration-200">Services</a>
+    <a href="#gallery" class="block hover:text-yellow-400 transition duration-200">Gallery</a>
+    <a href="#contact" class="block hover:text-yellow-400 transition duration-200">Contact</a>
+    <a href="booking.html" class="block bg-yellow-400 text-slate-900 px-4 py-2 rounded-md font-medium hover:bg-yellow-300 transition">Book Now</a>
+  </div>
+
+  <script>
+    // Mobile menu toggle script
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
+
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-slate-900">
+      <a href="#home" class="block text-gray-300 hover:text-yellow-400 py-2">Home</a>
+      <a href="#service" class="block text-gray-300 hover:text-yellow-400 py-2">Services</a>
+      <a href="#gallery" class="block text-gray-300 hover:text-yellow-400 py-2">Gallery</a>
+      <a href="#contact" class="block text-gray-300 hover:text-yellow-400 py-2">Contact</a>
+      <a href="booking.html" class="block bg-yellow-400 text-slate-900 font-medium mt-2 text-center py-2 rounded-md hover:bg-yellow-300 transition">Book Now</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- banner section -->
+   <section id="home" class="space-y-12 max-w-7xl mx-auto px-6 py-20">
+
+  <!-- Banner 1 -->
+  <div class="relative h-96 rounded-lg overflow-hidden shadow-lg">
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-fixed"
+      style="background-image: url('banner/1.jpeg');"
+    ></div>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 text-white">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Grand Parade Floats</h2>
+      <p class="max-w-xl text-lg md:text-xl drop-shadow-md">
+        Experience the elegance and charm of stunning parade floats with vibrant decorations and rich colors.
+      </p>
+    </div>
+  </div>
+
+  <!-- Banner 2 -->
+  <div class="relative h-96 rounded-lg overflow-hidden shadow-lg">
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-fixed"
+      style="background-image: url('banner/2.jpeg');"
+    ></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-black/70 to-transparent"></div>
+    <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 text-white">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Colorful Performers</h2>
+      <p class="max-w-xl text-lg md:text-xl drop-shadow-md">
+        Watch talented performers bring energy and joy to every moment of the parade with their stunning costumes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Banner 3 -->
+  <div class="relative h-96 rounded-lg overflow-hidden shadow-lg">
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-fixed"
+      style="background-image: url('banner/3.jpeg');"
+    ></div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 text-white">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Marching Band Rhythms</h2>
+      <p class="max-w-xl text-lg md:text-xl drop-shadow-md">
+        Feel the rhythm and power of live marching bands that bring excitement and life to the parade.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- service -->
+ <section id="service" class="bg-slate-800 py-24 px-6 md:px-32">
+  <h2 class="text-center text-5xl font-extrabold text-white mb-20 tracking-wide">Our Services</h2>
+  <div class="max-w-7xl mx-auto grid gap-12 md:grid-cols-3">
+  
+    <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col items-center text-center space-y-6">
+      <!-- Icon -->
+      <img src="service/photography.png" alt="Description" class="h-16 w-16" />
+
+      <h3 class="text-2xl font-semibold text-slate-900">Photography</h3>
+      <p class="text-slate-600 max-w-sm">Capture the flavor and fun of your catering event with stunning photos.
+Showcase your dishes and decor in every perfect shot.
+Book now to preserve memories that last a lifetime!</p>
+    </div>
+    
+    <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col items-center text-center space-y-6">
+      <!-- Icon -->
+      <img src="service/lipstick.png" alt="Description" class="h-16 w-16" />
+
+      <h3 class="text-2xl font-semibold text-slate-900">Bridal Makeup</h3>
+      <p class="text-slate-600 max-w-sm">Look flawless on your big day with expert bridal makeup.
+Enhance your natural beauty with a personalized touch.
+Book now and shine like the bride you deserve to be!</p>
+    </div>
+    
+    <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col items-center text-center space-y-6">
+      <!-- Icon -->
+      <img src="service/catering.png" alt="Description" class="h-16 w-16" />
+
+      <h3 class="text-2xl font-semibold text-slate-900">Catering Services</h3>
+      <p class="text-slate-600 max-w-sm">Delicious flavors, impeccable service—perfect for any event.
+Customized menus crafted to impress your guests.
+Book our catering team and make your celebration unforgettable!</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery" class="bg-slate-800 py-24 px-6 md:px-20">
+  <h2 class="text-center text-5xl font-extrabold text-white mb-16 tracking-wide">Gallery</h2>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+    <!-- Gallery Item -->
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:rotate-1 cursor-pointer">
+      <img src="banner/1.jpeg" alt="Parade Image 1" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Luxury Parade Floats</h3>
+        <p class="text-sm drop-shadow-md">Mesmerizing, intricate designs.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-yellow-400 shadow-yellow-400/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:-rotate-1 cursor-pointer">
+      <img src="galllery/2.jpeg" alt="Festival Image 2" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Cultural Performances</h3>
+        <p class="text-sm drop-shadow-md">Live traditional entertainers.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-pink-500 shadow-pink-500/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:rotate-1 cursor-pointer">
+      <img src="galllery/3.jpeg" alt="Music Image 3" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Marching Bands</h3>
+        <p class="text-sm drop-shadow-md">Dynamic musical acts.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-blue-400 shadow-blue-400/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:-rotate-1 cursor-pointer">
+      <img src="galllery/4.jpeg" alt="Marching Band Image 4" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Live Marching Bands</h3>
+        <p class="text-sm drop-shadow-md">Energize your event’s vibe.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-green-400 shadow-green-400/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:rotate-1 cursor-pointer">
+      <img src="galllery/5.jpeg" alt="Costume Image 5" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Themed Costumes</h3>
+        <p class="text-sm drop-shadow-md">Eye-catching attire for performers.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-purple-500 shadow-purple-500/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+    <div class="relative group overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105 hover:-rotate-1 cursor-pointer">
+      <img src="galllery/6.jpeg" alt="Crowd Image 6" class="w-full h-64 object-cover brightness-90 group-hover:brightness-75 transition duration-500" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-500 rounded-3xl"></div>
+      <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+        <h3 class="text-xl font-semibold drop-shadow-lg">Engaged Audiences</h3>
+        <p class="text-sm drop-shadow-md">Crowds loving every moment.</p>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-red-400 shadow-red-400/50 group-hover:shadow-lg transition duration-500"></div>
+    </div>
+
+  </div>
+
+  <!-- Instagram Button -->
+  <div class="mt-12 flex justify-center">
+    <a href="https://www.instagram.com/kanyakumari_decoration/" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300">
+      View on Instagram
+    </a>
+  </div>
+</section>
+
+
+
+<!-- contact page -->
+ <section id = "contact" class="min-h-screen bg-gradient-to-tr from-indigo-900 via-slate-800 to-gray-900 flex items-center justify-center px-6 md:px-24 py-24">
+  <div class="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16">
+
+    <!-- Left Side: Abstract Background + Message -->
+    <div class="relative flex flex-col justify-center text-white px-8 md:px-16">
+      <h1 class="text-6xl font-extrabold tracking-wide leading-tight mb-6 drop-shadow-lg">
+        Let's <span class="text-yellow-400">Connect</span>
+      </h1>
+      <p class="text-lg opacity-90 max-w-md leading-relaxed drop-shadow-md">
+        Have a question or want to book a service? Reach out anytime — we’re here to help you make your event unforgettable.
+      </p>
+      <!-- Abstract floating shapes -->
+      <div class="absolute -top-10 -left-10 w-48 h-48 bg-yellow-400 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-0 w-64 h-64 bg-indigo-700 rounded-3xl opacity-30 blur-2xl"></div>
+    </div>
+
+    <!-- Right Side: Glassmorphic Form -->
+    <form action="#" method="POST" 
+      class="relative bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl shadow-2xl p-10 flex flex-col gap-8 text-white"
+      style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);">
+      
+      <!-- Floating input wrapper -->
+      <div class="relative">
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          placeholder=" "
+          class="peer placeholder-transparent w-full rounded-lg bg-white/20 border border-white/40 py-4 px-5 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+        />
+        <label
+          for="name"
+          class="absolute left-5 top-4 text-white text-sm font-semibold peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/60 peer-focus:top-2 peer-focus:text-yellow-400 peer-focus:text-sm transition-all cursor-text"
+        >
+          Full Name
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-5 top-5 h-6 w-6 text-yellow-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.945 13.945 0 0112 15c2.5 0 4.85.7 6.879 1.9M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </div>
+
+      <div class="relative">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder=" "
+          class="peer placeholder-transparent w-full rounded-lg bg-white/20 border border-white/40 py-4 px-5 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+        />
+        <label
+          for="email"
+          class="absolute left-5 top-4 text-white text-sm font-semibold peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/60 peer-focus:top-2 peer-focus:text-yellow-400 peer-focus:text-sm transition-all cursor-text"
+        >
+          Email Address
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-5 top-5 h-6 w-6 text-yellow-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 01-8 0m8 0v4m-8-4v4M8 16h8m-4 4v-4" />
+        </svg>
+      </div>
+
+      <div class="relative">
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder=" "
+          class="peer placeholder-transparent w-full rounded-lg bg-white/20 border border-white/40 py-4 px-5 text-white font-semibold resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+        ></textarea>
+        <label
+          for="message"
+          class="absolute left-5 top-4 text-white text-sm font-semibold peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/60 peer-focus:top-2 peer-focus:text-yellow-400 peer-focus:text-sm transition-all cursor-text"
+        >
+          Your Message
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-5 top-5 h-6 w-6 text-yellow-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6m-6 4h10" />
+        </svg>
+      </div>
+
+      <button
+        type="submit"
+        class="self-end bg-yellow-400 text-slate-900 font-extrabold rounded-xl px-12 py-4 shadow-lg hover:shadow-yellow-500/80 hover:scale-105 transition transform"
+      >
+        Send
+      </button>
+
+      <!-- Decorative underline -->
+      <div class="absolute bottom-0 left-0 right-0 h-2 bg-yellow-400 rounded-b-3xl blur-xl opacity-60"></div>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- footer -->
+ <footer class="relative bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 text-slate-300 py-16 px-8 md:px-24 overflow-hidden">
+  <!-- Top slant -->
+  <div class="absolute top-0 left-0 w-full h-12 bg-yellow-500/80 transform -skew-y-2 origin-top-left"></div>
+
+  <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <!-- Brand -->
+    <div>
+      <h3 class="text-3xl font-extrabold text-yellow-400 mb-4">EventEase</h3>
+      <p class="max-w-xs leading-relaxed text-slate-400">
+        Creating memorable experiences, one event at a time.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <nav>
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Gallery</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Info -->
+    <address class="not-italic">
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Contact Us</h4>
+      <p class="mb-2">123 Event Street, Suite 456</p>
+      <p class="mb-2">Cityville, Country</p>
+      <p class="mb-2">Phone: +1 (555) 123-4567</p>
+      <p>Email: contact@eventease.com</p>
+    </address>
+
+    <!-- Social -->
+    <div>
+      <h4 class="text-xl font-semibold mb-4 text-yellow-400">Follow Us</h4>
+      <div class="flex space-x-6">
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.005 3.657 9.128 8.438 9.879v-6.987h-2.54v-2.892h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.466h-1.26c-1.243 0-1.63.774-1.63 1.566v1.875h2.773l-.443 2.892h-2.33v6.987C18.343 21.128 22 17.005 22 12z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2.5a1.5 1.5 0 11-3.001-.001A1.5 1.5 0 0116.5 5.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom slant -->
+  <div class="absolute bottom-0 left-0 w-full h-12 bg-yellow-500/80 transform skew-y-2 origin-bottom-left"></div>
+</footer>
+
+
+<!-- contact supabase -->
+ 
+
+
+</body>
+</html>
